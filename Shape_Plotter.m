@@ -1,6 +1,6 @@
 clc; clear
 
-% Shape file
+% Shape file to be plotted
 Shape = dlmread('/Users/marcusmichel/Projects/SimulationCode/ddscat7.3.2/Shapefiles/Experiment/shape.dat','%t',7,0);
 % Shape = dlmread('/Users/marcusmichel/Projects/SimulationCode/DDA_7.1/waveguide/7.1/10nm_JRD1/10nmds_JRD1.dat','%t',7,0);
 

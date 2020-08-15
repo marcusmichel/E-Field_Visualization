@@ -1,34 +1,8 @@
 clc; clear
 
+% Shape file
 Shape = dlmread('/Users/marcusmichel/Projects/SimulationCode/ddscat7.3.2/Shapefiles/Experiment/shape.dat','%t',7,0);
 % Shape = dlmread('/Users/marcusmichel/Projects/SimulationCode/DDA_7.1/waveguide/7.1/10nm_JRD1/10nmds_JRD1.dat','%t',7,0);
-%Shape(any(Shape(:,2)~=0,2),:)=[];
-
-%Attempt to color the array
-%myColors = zeros(size(Shape,1),3);
-% myColors = zeros(size(Shape, 1), 3); % List of rgb colors for every data point.
-% rowsToSetGreen = Shape(:,5) == 1;
-% rowsToSetRed = Shape(:,5) == 2;
-% rowsToSetBlue = Shape(:,5) == 3;
-% rows =Shape(25000:25012,5)==3;
-% rows;
-% myColors(rows,:) 
-% size(myColors,2)
-% size([0,0,1])
-% size(myColors(rows,:),1)
-% myColors(rows,:) = [0,0,1];
-% 
-% 
-% 
-% myColors(rowsToSetBlue, :) = [0,0,1];
-% myColors(rowsToSetGreen, :) = [0,1,0];
-% myColors(rowsToSetRed, :) = [1,0,0];
-
-%while Shape(:,4)==1
-    
-
-
-% scatter(Shape(:,2),Shape(:,3))
 
 sz = size(Shape);
 
@@ -80,5 +54,3 @@ ylabel('length_z(dipoles)')
 axis equal
 
 title('Front View')
-
-%axis([-65,75,-50,50])

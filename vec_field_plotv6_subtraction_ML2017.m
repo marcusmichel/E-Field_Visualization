@@ -83,7 +83,7 @@ clc
 % figure('Position',[0,0,2304,1440])
 figure('Position',[0,0,800,650])
 % Title = suptitle(title);
-sup = sgtitle(superTitle)
+sup = suptitle(superTitle)
 sup.FontSize = 15;
 
 % Ey_mag = Ey_mag1 - Ey_mag2;

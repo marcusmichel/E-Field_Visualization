@@ -13,8 +13,10 @@ field2 = dlmread('/Users/marcusmichel/Projects/SimulationCode/DDA_7.1/waveguide/
 % xy field
 % field = dlmread('/Users/marcusmichel/Projects/SimulationCode/DDA_7.1/waveguide/7.1/rails/160rails_sphere60-20/xy_z-0_5ds_675.E','%t',23,0);
 
-superTitle = "320 Rails&Sphere@0nm 923nm-623nm";
+superTitle = "320 Rails&Sphere@0nm 923nm-675nm";
 
+% % This section can be used to create graphs with labels if analyzing
+% % cross-sectional data.
 % % Before running, fill out each of these with the correct information
 % crossSctn = '0';
 % wavelength = '675';
@@ -34,8 +36,6 @@ xy = false;
 
 % 
 % superTitle = [wavelength,'nm Incident on ',newline,waveguideLength,'nm ',mesh,' ',dipoleSpacing, 'nmds WG @ ',crossSctn,'nm'];
-
-
 
 % This just clarifies we're in the xy or yz plane
 yz = true;
@@ -975,13 +975,14 @@ title('Imaginary E-field','Fontsize',18)
 %% Center Line Calculation
 % 
 % %Center Line Calculation 
-% 
+% %This section allows you to plot E fields along the middle of the
+% %waveguides.
 % % field = dlmread('/Users/marcusmichel/Projects/SimulationCode/DDA_7.1/waveguide/7.1/waveguide/filledWG/centerLine.E','%t',23,0);
 % field = dlmread('/Users/marcusmichel/Projects/SimulationCode/DDA_7.1/waveguide/7.1/rails/160rails_sphere60-20/centerLine.E','%t',23,0);
 % % figure()
 % %
 % dipoleSpacing = 5;
-% x = field(:,1)*5;
+% x = field(:,1)*dipoleSpacing;
 % magEx = (field(:,4).^2 +field(:,5).^2).^(1/2);
 % magEy = (field(:,6).^2 +field(:,7).^2).^(1/2);
 % magEz = (field(:,8).^2 +field(:,9).^2).^(1/2);
